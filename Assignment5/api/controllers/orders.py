@@ -1,7 +1,13 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status, Response, Depends
 from ..models import schemas
+from pydantic import BaseModel
 from ..models import models
+
+class order( BaseModel):
+    customer_name:str
+    description : str
+    
 
 
 def create(db: Session, order):

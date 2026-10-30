@@ -2,6 +2,9 @@ from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 from fastapi.middleware.cors import CORSMiddleware
 
+from Assignment5.api.controllers import resource, sandwiche
+from .controllers import recipe
+from .controllers import order_detail
 from .models import models
 from .models import schemas
 from .controllers import orders
